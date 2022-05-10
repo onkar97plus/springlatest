@@ -10,7 +10,7 @@ pipeline {
 					checkout scm
 					sh 'rm -rf *.war'
 					sh 'pwd'
-					sh 'jar -cvf SpringSurvey.jar -C survey/src/ .'
+					sh 'jar -cvf SpringSurvey.jar -C survey/ .'
 					sh 'mv SpringSurvey.jar survey/'
 					sh 'echo ${BUILD_TIMESTAMP}'
 					sh 'echo ${BUILD_ID}'
