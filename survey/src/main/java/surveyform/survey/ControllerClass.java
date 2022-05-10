@@ -37,7 +37,7 @@ public class ControllerClass {
 
 	} 
 
-	@RequestMapping("/get")
+	@RequestMapping("/fetch")
 	public List<SurveyModel> fetch(){
 		return dao.findAll();
 	}
