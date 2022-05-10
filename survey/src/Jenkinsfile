@@ -12,7 +12,7 @@ pipeline {
 					sh 'pwd'
 					sh 'mvn -f survey/pom.xml clean install -DskipTests'
 // 					sh 'jar -cvf SpringSurvey.jar -C survey/ .'
-					sh 'mv ~/.m2/repository/surveyform/survey/0.0.1-SNAPSHOTSpringSurvey.jar survey/target/'
+					sh 'mv ~/.m2/repository/surveyform/survey/0.0.1-SNAPSHOT/survey-0.0.1-SNAPSHOT.jar survey/target/SpringSurvey.jar'
 					sh 'echo ${BUILD_TIMESTAMP}'
 					sh 'echo ${BUILD_ID}'
 					sh 'docker login -u onkar97 -p $pass'
