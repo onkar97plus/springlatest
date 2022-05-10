@@ -10,7 +10,9 @@ pipeline {
 					checkout scm
 					sh 'rm -rf *.war'
 					sh 'pwd'
-					sh 'mvn -f survey/pom.xml clean install'
+					sh 'cd survey'
+					sh 'mvn -f clean install'
+					sh 'cd ..'
 					sh 'jar -cvf SpringSurvey.jar -C survey/ .'
 					sh 'mv SpringSurvey.jar survey/target/'
 					sh 'echo ${BUILD_TIMESTAMP}'
